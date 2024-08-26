@@ -16,7 +16,7 @@ public class ChangeColorWithEnergy : MonoBehaviour
     }
 
     public void SetEnergyLevel(int e) {
-        if (e >= 0 & e <= 5) {
+        if (e >= 0 && e <= 5) {
             var c = energyColors[e];
 
             GetComponent<SpriteRenderer>().color = c;
