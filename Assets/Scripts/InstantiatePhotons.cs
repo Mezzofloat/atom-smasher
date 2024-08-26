@@ -24,13 +24,14 @@ public class InstantiatePhotons : MonoBehaviour
     }
 
     IEnumerator SpawnPhoton() {
-        GameObject p;
+        ChangeColorWithEnergy p;
 
         while (true) {
             float angle = Random.Range(0, 360);
 
-            p = Instantiate(photonPrefab, photonSpawnDistance * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)), Quaternion.identity);
-            p.GetComponent<ChangeColorWithEnergy>().SetEnergyLevel(Random.Range(1,6));
+            p = Instantiate(photonPrefab, photonSpawnDistance * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)), Quaternion.identity).GetComponent<ChangeColorWithEnergy>();
+            p.SetEnergyLevel(Random.Range(1,6));
+            print("new photon with energy level " + p.energyLevel.ToString());
             yield return new WaitForSeconds(photonSpawnRate);
         }
     }
