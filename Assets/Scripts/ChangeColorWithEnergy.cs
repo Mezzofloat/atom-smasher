@@ -16,11 +16,9 @@ public class ChangeColorWithEnergy : MonoBehaviour
     }
 
     public void SetEnergyLevel(int e) {
-        print($"setenergied({e})");
         if (e >= 5) return;
         
         if (e >= 0) {
-            print("e is greater than 0");
             var c = energyColors[e];
 
             GetComponent<SpriteRenderer>().color = c;
