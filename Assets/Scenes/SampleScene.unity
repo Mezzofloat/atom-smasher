@@ -954,6 +954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sg: {fileID: 1041498144}
+  npc: {fileID: 521227773}
 --- !u!50 &775031804
 Rigidbody2D:
   serializedVersion: 4
