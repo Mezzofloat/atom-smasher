@@ -245,7 +245,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4dd62aca0e003249a3af8a96097232e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  energyLevel: 1
+  energyColors:
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0.6819977, b: 0, a: 1}
+  - {r: 0.97273636, g: 1, b: 0.2471698, a: 1}
+  - {r: 0.22522338, g: 1, b: 0.216981, a: 1}
+  - {r: 0, g: 0.8531337, b: 1, a: 1}
+  - {r: 0.47619623, g: 0.3754716, b: 1, a: 1}
+  tr: {fileID: 3042996602329260880}
 --- !u!114 &6342608064824730756
 MonoBehaviour:
   m_ObjectHideFlags: 0
