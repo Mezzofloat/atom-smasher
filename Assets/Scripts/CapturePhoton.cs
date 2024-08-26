@@ -19,7 +19,9 @@ public class CapturePhoton : MonoBehaviour
         }
         
         if (other.gameObject.CompareTag("Proton")) {
-            other.GetComponent<AudioSource>().Play();
+            print("other is a proton");
+            AudioSource captureSound = other.GetComponent<AudioSource>();
+            AudioSource.PlayClipAtPoint(captureSound.clip, transform.position);
             transform.parent.GetChild(1).GetChild(0).GetComponent<NucleusProtonCount>().AddProton();
             Destroy(other.gameObject);
         }
