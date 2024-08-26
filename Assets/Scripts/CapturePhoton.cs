@@ -13,12 +13,13 @@ public class CapturePhoton : MonoBehaviour
             if (other == null) {
                 GetComponent<OrbitalHealth>().energy -= photonEnergy;
             } else {
-                GetComponent<AudioSource>().Play();
+                //GetComponent<AudioSource>().Play();
                 Destroy(gameObject);
             }
         }
         
         if (other.gameObject.CompareTag("Proton")) {
+            other.GetComponent<AudioSource>().Play();
             transform.parent.GetChild(1).GetChild(0).GetComponent<NucleusProtonCount>().AddProton();
             Destroy(other.gameObject);
         }
