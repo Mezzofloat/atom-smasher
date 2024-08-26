@@ -15,8 +15,13 @@ public class InstantiatePhotons : MonoBehaviour
         float angleDistance = 360 / initialPhotonNumber;
 
         float angle = 0;
+
+        ChangeColorWithEnergy p;
+        
         for (int i = 0; i < initialPhotonNumber; i++) {
-            Instantiate(photonPrefab, new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * photonSpawnDistance, Quaternion.identity);
+            p = Instantiate(photonPrefab, new Vector3(Mathf.Cos(angle), Mathf.Sin(angle), 0) * photonSpawnDistance, Quaternion.identity).GetComponent<ChangeColorWithEnergy>();
+            int el = Random.Range(0,6);
+            p.SetEnergyLevel(el);
             angle += angleDistance;
         }
 
