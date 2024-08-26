@@ -5,7 +5,6 @@ using UnityEngine;
 public class ChangeColorWithEnergy : MonoBehaviour
 {
     [SerializeField] List<Color> energyColors;
-    [SerializeField] int maxEnergyLevel;
     [SerializeField] TrailRenderer tr;
 
     public int energyLevel { get; private set; }
@@ -17,10 +16,12 @@ public class ChangeColorWithEnergy : MonoBehaviour
     }
 
     public void SetEnergyLevel(int e) {
-        var c = energyColors[e];
+        if (e >= 0 & e <= 5) {
+            var c = energyColors[e];
 
-        GetComponent<SpriteRenderer>().color = c;
-        tr.startColor = tr.endColor = c;
+            GetComponent<SpriteRenderer>().color = c;
+            tr.startColor = tr.endColor = c;
+        }
 
         switch (e) {
             case 0:
