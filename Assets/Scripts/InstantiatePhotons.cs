@@ -30,7 +30,9 @@ public class InstantiatePhotons : MonoBehaviour
             float angle = Random.Range(0, 360);
 
             p = Instantiate(photonPrefab, photonSpawnDistance * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)), Quaternion.identity).GetComponent<ChangeColorWithEnergy>();
-            p.SetEnergyLevel(Random.Range(1,6));
+            
+            int el = Random.Range(0,6);
+            p.SetEnergyLevel(el);
             print("new photon with energy level " + p.energyLevel.ToString());
             yield return new WaitForSeconds(photonSpawnRate);
         }
