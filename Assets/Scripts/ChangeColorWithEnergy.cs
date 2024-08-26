@@ -20,11 +20,14 @@ public class ChangeColorWithEnergy : MonoBehaviour
         if (e >= 5) return;
         
         if (e >= 0) {
+            print("e is greater than 0");
             var c = energyColors[e];
 
             GetComponent<SpriteRenderer>().color = c;
             tr.startColor = tr.endColor = c;
         }
+
+        energyLevel = e;
 
         switch (e) {
             case 0:

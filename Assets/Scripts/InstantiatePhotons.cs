@@ -32,6 +32,7 @@ public class InstantiatePhotons : MonoBehaviour
             p = Instantiate(photonPrefab, photonSpawnDistance * new Vector3(Mathf.Cos(angle), Mathf.Sin(angle)), Quaternion.identity).GetComponent<ChangeColorWithEnergy>();
             
             int el = Random.Range(0,6);
+            print("el = " + el.ToString());
             p.SetEnergyLevel(el);
             print("new photon with energy level " + p.energyLevel.ToString());
             yield return new WaitForSeconds(photonSpawnRate);
