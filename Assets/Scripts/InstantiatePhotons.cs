@@ -9,9 +9,9 @@ public class InstantiatePhotons : MonoBehaviour
     [SerializeField] GameObject photonPrefab;
 
     // Start is called before the first frame update
-    public void OnStart() => Invoke("SpawnEs", 4);
+    public void OnStart() => Invoke("SpawnPs", 4);
 
-    public void SpawnEs() {
+    public void SpawnPs() {
         float angleDistance = 360 / initialPhotonNumber;
 
         float angle = 0;
