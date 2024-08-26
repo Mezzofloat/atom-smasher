@@ -8,7 +8,7 @@ public class ChangeColorWithEnergy : MonoBehaviour
     [SerializeField] int maxEnergyLevel;
     [SerializeField] TrailRenderer tr;
 
-    int energyLevel;
+    public int energyLevel { get; private set; }
 
     public void DecrementEnergyLevel(int i) {
         if (i >= (int)energyLevel) Destroy(gameObject);

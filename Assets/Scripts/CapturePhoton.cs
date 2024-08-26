@@ -6,7 +6,7 @@ public class CapturePhoton : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Photon")) {
-            var photonEnergy = (int)other.GetComponent<ChangeColorWithEnergy>().energyLevel;
+            var photonEnergy = other.GetComponent<ChangeColorWithEnergy>().energyLevel;
 
             other.GetComponent<ChangeColorWithEnergy>().DecrementEnergyLevel(GetComponent<OrbitalHealth>().energy);
 
