@@ -1146,6 +1146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 681656345}
+  mNWM: {fileID: 775031802}
 --- !u!4 &1041498145
 Transform:
   m_ObjectHideFlags: 0
