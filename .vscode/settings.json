@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "GMTK 2024.sln"
+    "dotnet.defaultSolution": "atom-smasher.sln"
 }
